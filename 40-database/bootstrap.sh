@@ -6,6 +6,8 @@ chmod 755 /var/log/roboshop
 touch /var/log/roboshop/ansible.log
 chmod 755 /var/log/roboshop/ansible.log
 
+pip3.9 install botocore boto3 netaddr
+
 component=$1 #mongodb
 environment=$2 #dev
 
