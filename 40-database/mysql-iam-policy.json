@@ -1,0 +1,18 @@
+{
+    "Version" : "2012-10-17",
+
+    "Statement" : [
+        {
+            "Action" : "ssm:GetParameter",
+            "Effect" : "Allow",
+            "Sid" : "VisualEditor0",
+            "Resource" : "arn:aws:secretsmanager:us-east-1:899259776595:secret:roboshop/my_sql_root_password-KRG5Am"
+        },
+        {
+            "Action" : "ssm:DescribeParameters",
+            "Effect" : "Allow",
+            "Sid" : "VisualEditor1",
+            "Resource" : "*"
+        }
+    ]
+}
