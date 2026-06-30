@@ -1,5 +1,5 @@
 resource "aws_security_group_rule" "mongodb_catalogue" {
-  security_group_id = locals.mongodb_sg_id
+  security_group_id = local.mongodb_sg_id
   type              = "ingress"
   from_port         = 27017
   to_port           = 27017
@@ -8,7 +8,7 @@ resource "aws_security_group_rule" "mongodb_catalogue" {
 }
 
 resource "aws_security_group_rule" "mongodb_user" {
-  security_group_id = locals.mongodb_sg_id
+  security_group_id = local.mongodb_sg_id
   type              = "ingress"
   from_port         = 27017
   to_port           = 27017
@@ -17,7 +17,7 @@ resource "aws_security_group_rule" "mongodb_user" {
 }
 
 resource "aws_security_group_rule" "mongodb_bastion" {
-  security_group_id = locals.mongodb_sg_id
+  security_group_id = local.mongodb_sg_id
   type              = "ingress"
   from_port         = 22
   to_port           = 22
@@ -26,7 +26,7 @@ resource "aws_security_group_rule" "mongodb_bastion" {
 }
 
 resource "aws_security_group_rule" "redis_user" {
-  security_group_id = locals.redis_sg_id
+  security_group_id = local.redis_sg_id
   type              = "ingress"
   from_port         = 6379
   to_port           = 6379
@@ -35,7 +35,7 @@ resource "aws_security_group_rule" "redis_user" {
 }
 
 resource "aws_security_group_rule" "redis_cart" {
-  security_group_id = locals.redis_sg_id
+  security_group_id = local.redis_sg_id
   type              = "ingress"
   from_port         = 6379
   to_port           = 6379
@@ -44,7 +44,7 @@ resource "aws_security_group_rule" "redis_cart" {
 }
 
 resource "aws_security_group_rule" "redis_bastion" {
-  security_group_id = locals.redis_sg_id
+  security_group_id = local.redis_sg_id
   type              = "ingress"
   from_port         = 22
   to_port           = 22
