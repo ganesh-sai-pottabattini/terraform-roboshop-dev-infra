@@ -10,6 +10,6 @@ environment=$2 #dev
 
 cd /home/ec2-user
 git clone https://github.com/ganesh-sai-pottabattini/ansible-roboshop-v2-roles.git
-cd roboshop-ansible-v2-roles
+cd ansible-roboshop-v2-roles
 git pull
 ansible-playbook -e component=$component -e env=$environment 1-component-configure.yaml
